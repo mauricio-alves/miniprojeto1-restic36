@@ -35,7 +35,6 @@ CREATE TABLE IF NOT EXISTS `resticDB`.`Produto` (
   PRIMARY KEY (`Id_Produto`)
   ) ENGINE = InnoDB;
 
-
 -- Criação da tabela “Pedido_tem_Produto”
 CREATE TABLE IF NOT EXISTS `resticDB`.`Pedido_tem_Produto` (
   `Pedido_Id_Pedido` INT NOT NULL,
