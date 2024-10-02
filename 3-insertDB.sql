@@ -19,7 +19,7 @@ INSERT INTO `Pedido` (`Id_Pedido`, `status`, `Cliente_Id_Cliente`) VALUES
   ('23', 'Cancelado', '2');
 
 -- Inserção de dados na tabela "Pedido_tem_Produto"
-INSERT INTO `Pedido_has_Produto` (`Pedido_Id_Pedido`, `Produto_Id_Produto`, `quantidade`) VALUES
+INSERT INTO `Pedido_tem_Produto` (`Pedido_Id_Pedido`, `Produto_Id_Produto`, `quantidade`) VALUES
   ('21', '11', '1'),
   ('21', '12', '3'),
   ('22', '15', '5');

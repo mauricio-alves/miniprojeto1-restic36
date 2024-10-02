@@ -1,1 +1,29 @@
-// 
+// Definição dos Endpoints da API RESTful para um sistema de vendas online, com operações CRUD básicas para clientes, pedidos e produtos.
+
+// Cliente (Usuário):
+GET /v1/clientes: Retorna uma lista de todos os clientes cadastrados no sistema.
+GET /v1/clientes/{id}: Retorna os detalhes de um cliente específico, identificado pelo seu ID.
+POST /v1/clientes: Cria um novo cliente no sistema, adicionando os dados fornecidos no corpo da requisição.
+PUT /v1/clientes/{id}: Atualiza as informações de um cliente existente, identificado pelo seu ID.
+DELETE /v1/clientes/{id}: Remove um cliente do sistema, com base no seu ID.
+
+// Pedido de Compra:
+GET /v1/clientes/{id_cliente}/pedidos: Retorna todos os pedidos de um cliente específico.
+GET /v1/clientes/{id_cliente}/pedidos/{id_pedido}: Retorna os detalhes de um pedido específico de um cliente.
+POST /v1/clientes/{id_cliente}/pedidos: Cria um novo pedido para um cliente.
+PUT /v1/clientes/{id_cliente}/pedidos/{id_pedido}: Atualiza um pedido específico de um cliente.
+DELETE /v1/clientes/{id_cliente}/pedidos/{id_pedido}: Remove um pedido específico de um cliente.
+
+// Produto (Item de Pedido):
+GET /v1/produtos: Retorna uma lista de todos os produtos disponíveis.
+GET /v1/produtos/{id}: Retorna os detalhes de um produto específico, identificado pelo seu ID.
+POST /v1/produtos: Cria um novo produto no sistema, adicionando os dados fornecidos.
+PUT /v1/produtos/{id}: Atualiza as informações de um produto existente, identificado pelo seu ID.
+DELETE /v1/produtos/{id}: Remove um produto do sistema, com base no seu ID.
+
+// Pedido tem Produto (Relação):
+GET /v1/clientes/{id_cliente}/pedidos/{id_pedido}/produtos: Retorna todos os produtos de um pedido de um cliente específico.
+GET /v1/clientes/{id_cliente}/pedidos/{id_pedido}/produtos/{id_produto}: Retorna os detalhes de um produto específico de um pedido de um cliente.
+POST /v1/clientes/{id_cliente}/pedidos/{id_pedido}/produtos: Adiciona um novo produto a um pedido de um cliente.
+PUT /v1/clientes/{id_cliente}/pedidos/{id_pedido}/produtos/{id_produto}: Atualiza a quantidade de um produto em um pedido de um cliente.
+DELETE /v1/clientes/{id_cliente}/pedidos/{id_pedido}/produtos/{id_produto}: Remove um produto de um pedido de um cliente.
